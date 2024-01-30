@@ -16,6 +16,7 @@
       src="https://kit.fontawesome.com/be64ac2687.js"
       crossorigin="anonymous"
     ></script>
+    <script src="index.js"></script>
   </head>
   <body>
     <header>
@@ -26,10 +27,19 @@
         <h3>Lam</h3>
       </div>
       <div class="right-menu">
-        <p>HOME</p>
-        <p>FEATURES</p>
-        <p>RESUME</p>
-        <p>CONTACT</p>
+        <p onclick="scrollToSection('home')">HOME</p>
+        <p onclick="scrollToSection('features')">FEATURES</p>
+        <p onclick="scrollToSection('resume')">RESUME</p>
+        <p onclick="scrollToSection('contact')">CONTACT</p>
+      </div>
+      <div id="menu">
+        <button class="menu-btn-list"><i class="fa-solid fa-bars"></i></button>
+        <div id="menu-list">
+          <p onclick="scrollToSection('home')">HOME</p>
+          <p onclick="scrollToSection('features')">FEATURES</p>
+          <p onclick="scrollToSection('resume')">RESUME</p>
+          <p onclick="scrollToSection('contact')">CONTACT</p>
+        </div>
       </div>
     </header>
     <main>
@@ -128,65 +138,18 @@
       </div>
 
       <div id="resume">
+        <p class="features-title">Resume</p>
+        <h3 class="resume-title">My Resume</h3>
         <div class="tab">
-          <div class="tab-education">
+          <div class="tab-education" onclick="changeTab('tab-education')">
             <p>Education</p>
           </div>
-          <div class="tab-skill">
+          <div class="tab-skill" onclick="changeTab('tab-skill')">
             <p>Professional Skills</p>
           </div>
         </div>
-        <div class="skill-container">
-          <div class="skill">
-            <h3 class="design-skill-title">Design Skill</h3>
-            <div class="design-skill-box">
-              <div class="skill-box-item">
-                <p>Figma</p>
-                <div class="skill-item">
-                  <div style="width: 70%"></div>
-                </div>
-              </div>
-              <div class="skill-box-item">
-                <p>Figma</p>
-                <div class="skill-item">
-                  <div style="width: 70%"></div>
-                </div>
-              </div>
-              <div class="skill-box-item">
-                <p>Figma</p>
-                <div class="skill-item">
-                  <div style="width: 70%"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="skill">
-            <h3 class="design-skill-title">Development Skill</h3>
-            <div class="design-skill-box">
-              <div class="skill-box-item">
-                <p>Figma</p>
-                <div class="skill-item">
-                  <div style="width: 70%"></div>
-                </div>
-              </div>
-              <div class="skill-box-item">
-                <p>Figma</p>
-                <div class="skill-item">
-                  <div style="width: 70%"></div>
-                </div>
-              </div>
-              <div class="skill-box-item">
-                <p>Figma</p>
-                <div class="skill-item">
-                  <div style="width: 70%"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <h3>My Resume</h3>
         <menu>
-          <div class="education-container">
+          <div id="tab-education" class="education-container chose-tab">
             <p>Education Quality</p>
             <div class="education">
               <div class="education-box">
@@ -221,8 +184,54 @@
               </div>
             </div>
           </div>
-          <div>
-            <p>Professional Skills</p>
+
+          <div id="tab-skill" class="skill-container chose-tab">
+            <div class="skill">
+              <h3 class="design-skill-title">Design Skill</h3>
+              <div class="design-skill-box">
+                <div class="skill-box-item">
+                  <p>Figma</p>
+                  <div class="skill-item">
+                    <div style="width: 70%"></div>
+                  </div>
+                </div>
+                <div class="skill-box-item">
+                  <p>Figma</p>
+                  <div class="skill-item">
+                    <div style="width: 70%"></div>
+                  </div>
+                </div>
+                <div class="skill-box-item">
+                  <p>Figma</p>
+                  <div class="skill-item">
+                    <div style="width: 70%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="skill">
+              <h3 class="design-skill-title">Development Skill</h3>
+              <div class="design-skill-box">
+                <div class="skill-box-item">
+                  <p>Figma</p>
+                  <div class="skill-item">
+                    <div style="width: 70%"></div>
+                  </div>
+                </div>
+                <div class="skill-box-item">
+                  <p>Figma</p>
+                  <div class="skill-item">
+                    <div style="width: 70%"></div>
+                  </div>
+                </div>
+                <div class="skill-box-item">
+                  <p>Figma</p>
+                  <div class="skill-item">
+                    <div style="width: 70%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </menu>
       </div>

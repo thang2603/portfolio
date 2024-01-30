@@ -15,7 +15,11 @@ body {
   display: flex;
   gap: 12px;
   align-items: center;
-  margin-right: 80px;
+  margin-left: 80px;
+}
+
+#menu {
+  display: none;
 }
 main {
   margin: 100px 284px;
@@ -228,6 +232,9 @@ header {
 }
 .education-detail {
   font-size: 16px;
+}
+#tab-skill {
+  display: none;
 }
 #contact {
   margin-top: 40px;
@@ -443,7 +450,10 @@ header {
   flex-direction: column;
   gap: 20px;
 }
-
+.resume-title {
+  text-align: center;
+  font-size: 30px;
+}
 @media screen and (min-width: 240px) {
   main {
     margin: 100px 10px;
@@ -467,6 +477,33 @@ header {
   .right-menu {
     display: none;
   }
+  .left-menu {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-left: 20px;
+  }
+  #menu {
+    display: inline-block;
+  }
+  .menu-btn-list {
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .menu-btn-list i {
+    font-size: 26px;
+    padding: 0 20px;
+    color: #ff014f;
+    transition-duration: 1s;
+  }
+  .menu-btn-list i:hover {
+    transform: scale(1.1);
+  }
+  #menu-list {
+    display: none;
+    justify-content: center;
+    background-color: #282c30;
+  }
 }
 /*Ipad dọc(768 x 1024)*/
 @media screen and (min-width: 768px) {
@@ -477,6 +514,15 @@ header {
     display: flex;
     gap: 30px;
     margin-right: 80px;
+  }
+  .left-menu {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-left: 100px;
+  }
+  #menu {
+    display: none;
   }
 }
 /*Ipad ngang(1024 x 768)*/
