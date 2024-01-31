@@ -143,11 +143,62 @@ header {
   align-items: center;
   border-radius: 8px;
 }
+#about-me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  padding-bottom: 40px;
+  border-bottom: 1px #c4c4c4 solid;
+  margin-top: 40px;
+}
+.about-me-intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.about-me-intro h2 {
+  font-size: 30px;
+  text-align: center;
+}
+.about-me-intro h4 {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+}
+.about-me-box {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.about-me-item {
+  display: flex;
+}
+.about-me-item h3 {
+  min-width: 200px;
+}
+.about-me-item i {
+  padding-right: 8px;
+  font-size: 22px;
+  color: #ff014f;
+}
+.table-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 #features {
   margin-top: 60px;
   display: flex;
   flex-direction: column;
   gap: 24px;
+  padding-bottom: 40px;
+  border-bottom: 1px #c4c4c4 solid;
 }
 .features-title {
   color: #ff014f;
@@ -189,11 +240,12 @@ header {
   font-size: 30px;
 }
 #resume {
-  margin-top: 50px;
+  margin-top: 40px;
   display: flex;
-
   flex-direction: column;
-  gap: 40px;
+  gap: 24px;
+  padding-bottom: 40px;
+  border-bottom: 1px #c4c4c4 solid;
 }
 .education-container {
   display: flex;
@@ -270,7 +322,13 @@ header {
 }
 .contact-box-address {
 }
-
+.contact-box-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  flex-direction: column;
+}
 .contact-your-infor {
   flex: 1;
   min-width: 300px;
@@ -504,6 +562,9 @@ header {
     justify-content: center;
     background-color: #282c30;
   }
+  .about-img {
+    display: none;
+  }
 }
 /*Ipad dọc(768 x 1024)*/
 @media screen and (min-width: 768px) {
@@ -524,11 +585,17 @@ header {
   #menu {
     display: none;
   }
+  .about-img {
+    display: none;
+  }
 }
 /*Ipad ngang(1024 x 768)*/
 @media screen and (min-width: 1024px) {
   main {
     margin: 100px 120px;
+  }
+  .about-img {
+    display: block;
   }
 }
 @media screen and (min-width: 1524px) {

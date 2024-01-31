@@ -28,6 +28,7 @@
       </div>
       <div class="right-menu">
         <p onclick="scrollToSection('home')">HOME</p>
+        <p onclick="scrollToSection('home')">ABOUT ME</p>
         <p onclick="scrollToSection('features')">FEATURES</p>
         <p onclick="scrollToSection('resume')">RESUME</p>
         <p onclick="scrollToSection('contact')">CONTACT</p>
@@ -96,7 +97,43 @@
           <img class="home-img" src="./assets/avatar.jpg" />
         </div>
       </div>
-
+      <div id="about-me">
+        <div class="box-home-img about-img">
+          <img class="home-img" src="./assets/avatar.jpg" />
+        </div>
+        <div class="table-container">
+          <div class="about-me-intro">
+            <p class="features-title">ABOUT</p>
+            <h2>About me</h2>
+            <h4>
+              A small river named Duden flows by their place and supplies it
+              with the necessary regelialia.e
+            </h4>
+          </div>
+          <div class="about-me-box">
+            <div class="about-me-item">
+              <h3><i class="fa-solid fa-signature"></i>Name:</h3>
+              <p>Thanh Lam</p>
+            </div>
+            <div class="about-me-item">
+              <h3><i class="fa-solid fa-cake-candles"></i>Date of birth:</h3>
+              <p>January 18,2002</p>
+            </div>
+            <div class="about-me-item">
+              <h3><i class="fa-solid fa-location-dot"></i>Address:</h3>
+              <p>Duc Thang Street, Cau Giay, Ha Noi</p>
+            </div>
+            <div class="about-me-item">
+              <h3><i class="fa-solid fa-envelope"></i>Email:</h3>
+              <p>thanhlam@gmail.com</p>
+            </div>
+            <div class="about-me-item">
+              <h3><i class="fa-solid fa-phone"></i>Phone:</h3>
+              <p>0123238747</p>
+            </div>
+          </div>
+        </div>
+      </div>
       <div id="features">
         <p class="features-title">FEATURES</p>
         <h3 class="features-header">What I Do</h3>
@@ -138,7 +175,7 @@
       </div>
 
       <div id="resume">
-        <p class="features-title">Resume</p>
+        <p class="features-title">RESUME</p>
         <h3 class="resume-title">My Resume</h3>
         <div class="tab">
           <div class="tab-education" onclick="changeTab('tab-education')">
@@ -150,7 +187,6 @@
         </div>
         <menu>
           <div id="tab-education" class="education-container chose-tab">
-            <p>Education Quality</p>
             <div class="education">
               <div class="education-box">
                 <h4>Personal Portfolion April Fools</h4>
@@ -237,7 +273,7 @@
       </div>
 
       <div id="contact">
-        <div>
+        <div class="contact-box-title">
           <p class="contact-title">Contact</p>
           <h3 class="contact-header">Contact With Me</h3>
         </div>
