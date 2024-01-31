@@ -64,7 +64,7 @@ header {
   justify-content: center;
   flex-wrap: wrap-reverse;
   gap: 100px;
-  padding-bottom: 40px;
+  padding: 90px 0px 60px 0px;
   border-bottom: 1px #c4c4c4 solid;
 }
 .home-infor {
@@ -142,15 +142,19 @@ header {
   justify-content: center;
   align-items: center;
   border-radius: 8px;
+  cursor: pointer;
+  transition-duration: 1s;
+}
+.box-contact-item div:hover {
+  transform: scale(1.1);
 }
 #about-me {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 100px;
-  padding-bottom: 40px;
+  padding: 60px 0px;
   border-bottom: 1px #c4c4c4 solid;
-  margin-top: 40px;
 }
 .about-me-intro {
   display: flex;
@@ -193,11 +197,10 @@ header {
   flex-direction: column;
 }
 #features {
-  margin-top: 60px;
+  padding: 90px 0px;
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding-bottom: 40px;
   border-bottom: 1px #c4c4c4 solid;
 }
 .features-title {
@@ -240,11 +243,10 @@ header {
   font-size: 30px;
 }
 #resume {
-  margin-top: 40px;
+  padding: 90px 0px;
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding-bottom: 40px;
   border-bottom: 1px #c4c4c4 solid;
 }
 .education-container {
@@ -289,7 +291,7 @@ header {
   display: none;
 }
 #contact {
-  margin-top: 40px;
+  padding: 40px 0px;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -512,6 +514,20 @@ header {
   text-align: center;
   font-size: 30px;
 }
+#modal {
+  display: none;
+}
+#menu-list-nav {
+  display: none;
+}
+#menu-list-nav p {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #3c3e41;
+}
+#menu-list-nav p:hover {
+  cursor: pointer;
+}
 @media screen and (min-width: 240px) {
   main {
     margin: 100px 10px;
@@ -565,11 +581,44 @@ header {
   .about-img {
     display: none;
   }
+  #modal {
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #282c30;
+    z-index: 2;
+  }
+  #menu-list-nav {
+    width: 200px;
+    height: 100vh;
+    background-color: #ffffff;
+    position: absolute;
+    top: 90px;
+    opacity: 1;
+    z-index: 30;
+    flex-direction: column;
+    gap: 20px;
+    left: 0;
+    padding: 20px;
+    animation: nav-menu 2s;
+  }
 }
 /*Ipad dọc(768 x 1024)*/
 @media screen and (min-width: 768px) {
   main {
     margin: 100px 100px;
+  }
+  #modal {
+    display: none;
+  }
+  #body {
+    position: relative;
+  }
+  #menu-list-nav {
+    display: none;
   }
   .right-menu {
     display: flex;
@@ -594,6 +643,12 @@ header {
   main {
     margin: 100px 120px;
   }
+  #modal {
+    display: none;
+  }
+  #body {
+    position: relative;
+  }
   .about-img {
     display: block;
   }
@@ -601,5 +656,14 @@ header {
 @media screen and (min-width: 1524px) {
   main {
     margin: 100px 284px;
+  }
+}
+
+@keyframes nav-menu {
+  0% {
+    transform: translateX(-200px);
+  }
+  100% {
+    transform: translateX(0px);
   }
 }

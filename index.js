@@ -13,3 +13,22 @@ const scrollToSection = (sectionId) => {
     section.scrollIntoView({ behavior: "smooth" });
   }
 };
+
+const openModal = () => {
+  document.getElementById("body").style.position = "fixed";
+  document.getElementById("modal").style.display = "block";
+  document.getElementById("menu-list-nav").style.display = "flex";
+};
+
+const closeModal = (sectionId) => {
+  document.getElementById("body").style.position = "relative";
+  document.getElementById("modal").style.display = "none";
+  document.getElementById("menu-list-nav").style.display = "none";
+  scrollToSection(sectionId);
+};
+
+const clearModal = () => {
+  document.getElementById("body").style.position = "relative";
+  document.getElementById("modal").style.display = "none";
+  document.getElementById("menu-list-nav").style.display = "none";
+};

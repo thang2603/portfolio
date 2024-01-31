@@ -18,7 +18,7 @@
     ></script>
     <script src="index.js"></script>
   </head>
-  <body>
+  <body id="body">
     <header>
       <div class="left-menu">
         <div class="logo">
@@ -28,21 +28,25 @@
       </div>
       <div class="right-menu">
         <p onclick="scrollToSection('home')">HOME</p>
-        <p onclick="scrollToSection('home')">ABOUT ME</p>
+        <p onclick="scrollToSection('about-me')">ABOUT</p>
         <p onclick="scrollToSection('features')">FEATURES</p>
         <p onclick="scrollToSection('resume')">RESUME</p>
         <p onclick="scrollToSection('contact')">CONTACT</p>
       </div>
       <div id="menu">
-        <button class="menu-btn-list"><i class="fa-solid fa-bars"></i></button>
-        <div id="menu-list">
-          <p onclick="scrollToSection('home')">HOME</p>
-          <p onclick="scrollToSection('features')">FEATURES</p>
-          <p onclick="scrollToSection('resume')">RESUME</p>
-          <p onclick="scrollToSection('contact')">CONTACT</p>
-        </div>
+        <button class="menu-btn-list" onclick="openModal()">
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </div>
     </header>
+    <div id="modal"></div>
+    <div id="menu-list-nav">
+      <p onclick="closeModal('home')">HOME</p>
+      <p onclick="closeModal('about-me')">ABOUT</p>
+      <p onclick="closeModal('features')">FEATURES</p>
+      <p onclick="closeModal('resume')">RESUME</p>
+      <p onclick="closeModal('contact')">CONTACT</p>
+    </div>
     <main>
       <div id="home">
         <div class="home-infor">
@@ -66,13 +70,13 @@
             <div class="home-contact-item">
               <p>Find with me</p>
               <div class="box-contact-item">
-                <div>
+                <div class="box-contact-item-icon">
                   <i class="fa-brands fa-facebook"></i>
                 </div>
-                <div>
+                <div class="box-contact-item-icon">
                   <i class="fa-brands fa-instagram"></i>
                 </div>
-                <div>
+                <div class="box-contact-item-icon">
                   <i class="fa-brands fa-linkedin"></i>
                 </div>
               </div>
@@ -80,13 +84,13 @@
             <div class="home-contact-item">
               <p>BEST SKILL ON</p>
               <div class="box-contact-item">
-                <div>
+                <div class="box-contact-item-icon">
                   <i class="fa-brands fa-figma"></i>
                 </div>
-                <div>
+                <div class="box-contact-item-icon">
                   <i class="fa-brands fa-figma"></i>
                 </div>
-                <div>
+                <div class="box-contact-item-icon">
                   <i class="fa-brands fa-figma"></i>
                 </div>
               </div>
@@ -177,6 +181,7 @@
       <div id="resume">
         <p class="features-title">RESUME</p>
         <h3 class="resume-title">My Resume</h3>
+
         <div class="tab">
           <div class="tab-education" onclick="changeTab('tab-education')">
             <p>Education</p>
