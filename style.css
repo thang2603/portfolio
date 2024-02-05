@@ -182,7 +182,7 @@ header {
   display: flex;
 }
 .about-me-item h3 {
-  min-width: 200px;
+  min-width: 160px;
 }
 .about-me-item i {
   padding-right: 8px;
@@ -191,6 +191,7 @@ header {
 }
 .table-container {
   flex: 1;
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -542,6 +543,9 @@ header {
   .right-menu {
     display: none;
   }
+  .about-img {
+    display: none;
+  }
 }
 /*Tablet nhỏ(480 x 640)*/
 @media screen and (min-width: 480px) {
@@ -605,6 +609,12 @@ header {
     padding: 20px;
     animation: nav-menu 2s;
   }
+  .about-img {
+    display: none;
+  }
+  .table-container { 
+    margin: 0 4px;
+  }
 }
 /*Ipad dọc(768 x 1024)*/
 @media screen and (min-width: 768px) {
@@ -637,6 +647,7 @@ header {
   .about-img {
     display: none;
   }
+
 }
 /*Ipad ngang(1024 x 768)*/
 @media screen and (min-width: 1024px) {
@@ -660,6 +671,7 @@ header {
 }
 
 @keyframes nav-menu {
+
   0% {
     transform: translateX(-200px);
   }
