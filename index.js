@@ -32,3 +32,28 @@ const clearModal = () => {
   document.getElementById("modal").style.display = "none";
   document.getElementById("menu-list-nav").style.display = "none";
 };
+
+var id = 1;
+const controlTetinalNext = (length) => {
+  id = id + 1;
+  if (id > length) {
+    id = length
+  }
+  for (let i = 1; i <= length; i++) {
+    document.getElementById(`show-slide-${i}`).style.display = 'none'
+  }
+  document.getElementById(`show-slide-${id}`).style.display = 'flex'
+
+}
+
+const controlTetinalPre = (length) => {
+  id = id - 1;
+  if (id < 1) {
+    id = 1;
+  }
+  for (let i = 1; i <= length; i++) {
+    document.getElementById(`show-slide-${i}`).style.display = 'none'
+  }
+  document.getElementById(`show-slide-${id}`).style.display = 'flex'
+
+}
