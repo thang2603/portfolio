@@ -1,332 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/be64ac2687.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="index.js"></script>
-  </head>
-  <body id="body">
-    <header>
-      <div class="left-menu">
-        <div class="logo">
-          <img style="border-radius: 50%" src="./assets/logo1.jpg" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/be64ac2687.js" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+</head>
+
+<body id="body">
+  <header>
+    <div class="left-menu">
+      <div class="logo">
+        <img style="border-radius: 50%" src="./assets/logo1.jpg" />
+      </div>
+      <h3>Lam</h3>
+    </div>
+    <div class="right-menu">
+      <p onclick="scrollToSection('home')">HOME</p>
+      <p onclick="scrollToSection('about-me')">ABOUT</p>
+      <p onclick="scrollToSection('features')">FEATURES</p>
+      <p onclick="scrollToSection('resume')">RESUME</p>
+      <p onclick="scrollToSection('contact')">CONTACT</p>
+    </div>
+    <div id="menu">
+      <button class="menu-btn-list" onclick="openModal()">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+  <div id="modal"></div>
+  <div id="menu-list-nav">
+    <p onclick="closeModal('home')">HOME</p>
+    <p onclick="closeModal('about-me')">ABOUT</p>
+    <p onclick="closeModal('features')">FEATURES</p>
+    <p onclick="closeModal('resume')">RESUME</p>
+    <p onclick="closeModal('contact')">CONTACT</p>
+  </div>
+  <main>
+    <div id="home">
+      <div class="home-infor">
+        <p class="welcome">welcome to my world</p>
+        <div class="welcome-infor">
+          <div class="welcome-name">
+            <h2>Hi, I'm</h2>
+            <h2 style="color: #ff014f">Thanh Lam</h2>
+          </div>
+          <div class="welcome-career">
+            <h3 style="color: #ff014f">a</h3>
+            <h3>Developer</h3>
+          </div>
         </div>
-        <h3>Lam</h3>
+        <p class="home-infor-introduce">
+          I use animation as a third dimension by which to simplify
+          experiences and kuiding thro each and every interaction. I’m not
+          adding motion just to spruce things up, but doing it in ways that.
+        </p>
+        <div class="home-contact">
+          <div class="home-contact-item">
+            <p>Find with me</p>
+            <div class="box-contact-item">
+              <div class="box-contact-item-icon">
+                <i class="fa-brands fa-facebook"></i>
+              </div>
+              <div class="box-contact-item-icon">
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+              <div class="box-contact-item-icon">
+                <i class="fa-brands fa-linkedin"></i>
+              </div>
+            </div>
+          </div>
+          <div class="home-contact-item">
+            <p>BEST SKILL ON</p>
+            <div class="box-contact-item">
+              <div class="box-contact-item-icon">
+                <i class="fa-brands fa-figma"></i>
+              </div>
+              <div class="box-contact-item-icon">
+                <i class="fa-brands fa-figma"></i>
+              </div>
+              <div class="box-contact-item-icon">
+                <i class="fa-brands fa-figma"></i>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="right-menu">
-        <p onclick="scrollToSection('home')">HOME</p>
-        <p onclick="scrollToSection('about-me')">ABOUT</p>
-        <p onclick="scrollToSection('features')">FEATURES</p>
-        <p onclick="scrollToSection('resume')">RESUME</p>
-        <p onclick="scrollToSection('contact')">CONTACT</p>
+      <div class="box-home-img">
+        <img class="home-img" src="./assets/avatar.jpg" />
       </div>
-      <div id="menu">
-        <button class="menu-btn-list" onclick="openModal()">
-          <i class="fa-solid fa-bars"></i>
+    </div>
+    <div id="about-me">
+      <div class="box-home-img about-img">
+        <img class="home-img" src="./assets/avatar.jpg" />
+      </div>
+      <div class="table-container">
+        <div class="about-me-intro">
+          <p class="features-title">ABOUT</p>
+          <h2>About me</h2>
+          <h4>
+            A small river named Duden flows by their place and supplies it
+            with the necessary regelialia.e
+          </h4>
+        </div>
+        <div class="about-me-box">
+          <div class="about-me-item">
+            <h3><i class="fa-solid fa-signature"></i>Name:</h3>
+            <p>Thanh Lam</p>
+          </div>
+          <div class="about-me-item">
+            <h3><i class="fa-solid fa-cake-candles"></i>Date of birth:</h3>
+            <p>January 18,2002</p>
+          </div>
+          <div class="about-me-item">
+            <h3><i class="fa-solid fa-location-dot"></i>Address:</h3>
+            <p>Duc Thang Street, Cau Giay, Ha Noi</p>
+          </div>
+          <div class="about-me-item">
+            <h3><i class="fa-solid fa-envelope"></i>Email:</h3>
+            <p>thanhlam@gmail.com</p>
+          </div>
+          <div class="about-me-item">
+            <h3><i class="fa-solid fa-phone"></i>Phone:</h3>
+            <p>0123238747</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="features">
+      <p class="features-title">FEATURES</p>
+      <h3 class="features-header">What I Do</h3>
+      <div class="features-container">
+        <div class="features-box">
+          <div class="features-box-icon">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <h3>App Development</h3>
+          <p>
+            JohnDoe — Free One Page Portfolio Website Bootstrap
+            Template.JohnDoe — Free One Page Portfolio Website Bootstrap
+            Template
+          </p>
+        </div>
+        <div class="features-box">
+          <div class="features-box-icon">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <h3>App Development</h3>
+          <p>
+            JohnDoe — Free One Page Portfolio Website Bootstrap
+            Template.JohnDoe — Free One Page Portfolio Website Bootstrap
+            Template
+          </p>
+        </div>
+        <div class="features-box">
+          <div class="features-box-icon">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <h3>App Development</h3>
+          <p>
+            JohnDoe — Free One Page Portfolio Website Bootstrap
+            Template.JohnDoe — Free One Page Portfolio Website Bootstrap
+            Template
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="resume">
+      <p class="features-title">RESUME</p>
+      <h3 class="resume-title">My Resume</h3>
+
+      <div class="tab">
+        <div class="tab-education" onclick="changeTab('tab-education')">
+          <p>Education</p>
+        </div>
+        <div class="tab-skill" onclick="changeTab('tab-skill')">
+          <p>Professional Skills</p>
+        </div>
+      </div>
+      <menu>
+        <div id="tab-education" class="education-container chose-tab">
+          <div class="education">
+            <div class="education-box">
+              <h4>Personal Portfolion April Fools</h4>
+              <p class="education-stage">University of DVI (2018-2002)</p>
+              <div class="education-box-line"></div>
+              <p class="education-detail">
+                The education should be very interactual. Ut tincidunt est ac
+                dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet
+                sem in, lobortis mauris hendrerit ante.
+              </p>
+            </div>
+            <div class="education-box">
+              <h4>Personal Portfolion April Fools</h4>
+              <p class="education-stage">University of DVI (2018-2002)</p>
+              <div class="education-box-line"></div>
+              <p class="education-detail">
+                The education should be very interactual. Ut tincidunt est ac
+                dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet
+                sem in, lobortis mauris hendrerit ante.
+              </p>
+            </div>
+            <div class="education-box">
+              <h4>Personal Portfolion April Fools</h4>
+              <p class="education-stage">University of DVI (2018-2002)</p>
+              <div class="education-box-line"></div>
+              <p class="education-detail">
+                The education should be very interactual. Ut tincidunt est ac
+                dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet
+                sem in, lobortis mauris hendrerit ante.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div id="tab-skill" class="skill-container chose-tab">
+          <div class="skill">
+            <h3 class="design-skill-title">Design Skill</h3>
+            <div class="design-skill-box">
+              <div class="skill-box-item">
+                <p>Figma</p>
+                <div class="skill-item">
+                  <div style="width: 70%"></div>
+                </div>
+              </div>
+              <div class="skill-box-item">
+                <p>Figma</p>
+                <div class="skill-item">
+                  <div style="width: 70%"></div>
+                </div>
+              </div>
+              <div class="skill-box-item">
+                <p>Figma</p>
+                <div class="skill-item">
+                  <div style="width: 70%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="skill">
+            <h3 class="design-skill-title">Development Skill</h3>
+            <div class="design-skill-box">
+              <div class="skill-box-item">
+                <p>Figma</p>
+                <div class="skill-item">
+                  <div style="width: 70%"></div>
+                </div>
+              </div>
+              <div class="skill-box-item">
+                <p>Figma</p>
+                <div class="skill-item">
+                  <div style="width: 70%"></div>
+                </div>
+              </div>
+              <div class="skill-box-item">
+                <p>Figma</p>
+                <div class="skill-item">
+                  <div style="width: 70%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </menu>
+    </div>
+
+    <div id="tetinal">
+      <div class="contact-box-title">
+        <p class="contact-title">Testinal</p>
+        <h3 class="contact-header">Testinal With Me</h3>
+      </div>
+      <div class="tetinal-container">
+        <div class="tetinal-box " id="show-slide-1">
+          <div class="tetinal-box-img">
+            <img src="./assets/avatar.jpg" />
+          </div>
+          <div class="tetinal-box-content">
+            <div class="tetinal-box-content-icon">
+              <h1>"</h1>
+              <h1>"</h1>
+            </div>
+            <h3>Trần Thi Thu Phương</h3>
+            <p>Tôi đã từng là giáo viên của Thanh Lam trong môn học “Đồ học ứng dụng” và “Thiết kế Web” và tôi thấy
+              Thanh Lam là một sinh viên chăm chỉ và sáng tạo,luôn có tinh thần học hỏi và cầu tiến .Thanh Lam có khả
+              năng thiết kế độc đáo, mới mẻ, luôn hoàn thành xuất sắc các bài tập, dự án với chất lượng cao.</p>
+          </div>
+        </div>
+        <div class="tetinal-box " id="show-slide-2">
+          <div class="tetinal-box-img">
+            <img src="./assets/avatar.jpg" />
+          </div>
+          <div class="tetinal-box-content">
+            <div class="tetinal-box-content-icon">
+              <h1>"</h1>
+              <h1>"</h1>
+            </div>
+            <h3>Đinh Thị Quỳnh</h3>
+            <p>Tôi đã có cơ hội làm việc cùng Thanh Lam trong một vài dự án. Thanh Lam không chỉ có kiến thức sâu rộng
+              về lập trình mà còn thể hiện sự sáng tạo và khả năng làm việc nhóm xuất sắc. Đối với mọi thách thức, Thanh
+              Lam luôn tìm ra giải pháp linh hoạt và hiệu quả. Một đồng nghiệp xuất sắc và đáng tin cậy!</p>
+          </div>
+        </div>
+      </div>
+      <div class="tetinal-control">
+        <button id="tetinal-control-pre" onclick="controlTetinalPre(2)"><i class="fa-solid fa-backward"></i></button>
+        <button id="tetinal-control-next" onclick="controlTetinalNext(2)">
+          <i class="fa-solid fa-forward"></i>
         </button>
       </div>
-    </header>
-    <div id="modal"></div>
-    <div id="menu-list-nav">
-      <p onclick="closeModal('home')">HOME</p>
-      <p onclick="closeModal('about-me')">ABOUT</p>
-      <p onclick="closeModal('features')">FEATURES</p>
-      <p onclick="closeModal('resume')">RESUME</p>
-      <p onclick="closeModal('contact')">CONTACT</p>
     </div>
-    <main>
-      <div id="home">
-        <div class="home-infor">
-          <p class="welcome">welcome to my world</p>
-          <div class="welcome-infor">
-            <div class="welcome-name">
-              <h2>Hi, I'm</h2>
-              <h2 style="color: #ff014f">Thanh Lam</h2>
-            </div>
-            <div class="welcome-career">
-              <h3 style="color: #ff014f">a</h3>
-              <h3>Developer</h3>
-            </div>
+
+    <div id="contact">
+      <div class="contact-box-title">
+        <p class="contact-title">Contact</p>
+        <h3 class="contact-header">Contact With Me</h3>
+      </div>
+      <div class="contact-container">
+        <div class="contact-my-infor">
+          <div class="contact-box-img">
+            <img src="./assets/contact1.png" />
           </div>
-          <p class="home-infor-introduce">
-            I use animation as a third dimension by which to simplify
-            experiences and kuiding thro each and every interaction. I’m not
-            adding motion just to spruce things up, but doing it in ways that.
+          <div class="contact-box-name">
+            <h3>Thanh Lam</h3>
+            <p>Student</p>
+          </div>
+          <p class="contact-box-detail">
+            I am available for freelance work. Connect with me via and call in
+            to my account.
           </p>
-          <div class="home-contact">
-            <div class="home-contact-item">
-              <p>Find with me</p>
-              <div class="box-contact-item">
-                <div class="box-contact-item-icon">
-                  <i class="fa-brands fa-facebook"></i>
-                </div>
-                <div class="box-contact-item-icon">
-                  <i class="fa-brands fa-instagram"></i>
-                </div>
-                <div class="box-contact-item-icon">
-                  <i class="fa-brands fa-linkedin"></i>
-                </div>
-              </div>
-            </div>
-            <div class="home-contact-item">
-              <p>BEST SKILL ON</p>
-              <div class="box-contact-item">
-                <div class="box-contact-item-icon">
-                  <i class="fa-brands fa-figma"></i>
-                </div>
-                <div class="box-contact-item-icon">
-                  <i class="fa-brands fa-figma"></i>
-                </div>
-                <div class="box-contact-item-icon">
-                  <i class="fa-brands fa-figma"></i>
-                </div>
-              </div>
-            </div>
+          <div class="contact-box-address">
+            <p>Phone: +01234567890</p>
+            <p>Email: admin@example.com</p>
           </div>
         </div>
-        <div class="box-home-img">
-          <img class="home-img" src="./assets/avatar.jpg" />
-        </div>
-      </div>
-      <div id="about-me">
-        <div class="box-home-img about-img">
-          <img class="home-img" src="./assets/avatar.jpg" />
-        </div>
-        <div class="table-container">
-          <div class="about-me-intro">
-            <p class="features-title">ABOUT</p>
-            <h2>About me</h2>
-            <h4>
-              A small river named Duden flows by their place and supplies it
-              with the necessary regelialia.e
-            </h4>
-          </div>
-          <div class="about-me-box">
-            <div class="about-me-item">
-              <h3><i class="fa-solid fa-signature"></i>Name:</h3>
-              <p>Thanh Lam</p>
-            </div>
-            <div class="about-me-item">
-              <h3><i class="fa-solid fa-cake-candles"></i>Date of birth:</h3>
-              <p>January 18,2002</p>
-            </div>
-            <div class="about-me-item">
-              <h3><i class="fa-solid fa-location-dot"></i>Address:</h3>
-              <p>Duc Thang Street, Cau Giay, Ha Noi</p>
-            </div>
-            <div class="about-me-item">
-              <h3><i class="fa-solid fa-envelope"></i>Email:</h3>
-              <p>thanhlam@gmail.com</p>
-            </div>
-            <div class="about-me-item">
-              <h3><i class="fa-solid fa-phone"></i>Phone:</h3>
-              <p>0123238747</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="features">
-        <p class="features-title">FEATURES</p>
-        <h3 class="features-header">What I Do</h3>
-        <div class="features-container">
-          <div class="features-box">
-            <div class="features-box-icon">
-              <i class="fa-solid fa-bars"></i>
-            </div>
-            <h3>App Development</h3>
-            <p>
-              JohnDoe — Free One Page Portfolio Website Bootstrap
-              Template.JohnDoe — Free One Page Portfolio Website Bootstrap
-              Template
-            </p>
-          </div>
-          <div class="features-box">
-            <div class="features-box-icon">
-              <i class="fa-solid fa-bars"></i>
-            </div>
-            <h3>App Development</h3>
-            <p>
-              JohnDoe — Free One Page Portfolio Website Bootstrap
-              Template.JohnDoe — Free One Page Portfolio Website Bootstrap
-              Template
-            </p>
-          </div>
-          <div class="features-box">
-            <div class="features-box-icon">
-              <i class="fa-solid fa-bars"></i>
-            </div>
-            <h3>App Development</h3>
-            <p>
-              JohnDoe — Free One Page Portfolio Website Bootstrap
-              Template.JohnDoe — Free One Page Portfolio Website Bootstrap
-              Template
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div id="resume">
-        <p class="features-title">RESUME</p>
-        <h3 class="resume-title">My Resume</h3>
-
-        <div class="tab">
-          <div class="tab-education" onclick="changeTab('tab-education')">
-            <p>Education</p>
-          </div>
-          <div class="tab-skill" onclick="changeTab('tab-skill')">
-            <p>Professional Skills</p>
-          </div>
-        </div>
-        <menu>
-          <div id="tab-education" class="education-container chose-tab">
-            <div class="education">
-              <div class="education-box">
-                <h4>Personal Portfolion April Fools</h4>
-                <p class="education-stage">University of DVI (2018-2002)</p>
-                <div class="education-box-line"></div>
-                <p class="education-detail">
-                  The education should be very interactual. Ut tincidunt est ac
-                  dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet
-                  sem in, lobortis mauris hendrerit ante.
-                </p>
-              </div>
-              <div class="education-box">
-                <h4>Personal Portfolion April Fools</h4>
-                <p class="education-stage">University of DVI (2018-2002)</p>
-                <div class="education-box-line"></div>
-                <p class="education-detail">
-                  The education should be very interactual. Ut tincidunt est ac
-                  dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet
-                  sem in, lobortis mauris hendrerit ante.
-                </p>
-              </div>
-              <div class="education-box">
-                <h4>Personal Portfolion April Fools</h4>
-                <p class="education-stage">University of DVI (2018-2002)</p>
-                <div class="education-box-line"></div>
-                <p class="education-detail">
-                  The education should be very interactual. Ut tincidunt est ac
-                  dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet
-                  sem in, lobortis mauris hendrerit ante.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div id="tab-skill" class="skill-container chose-tab">
-            <div class="skill">
-              <h3 class="design-skill-title">Design Skill</h3>
-              <div class="design-skill-box">
-                <div class="skill-box-item">
-                  <p>Figma</p>
-                  <div class="skill-item">
-                    <div style="width: 70%"></div>
-                  </div>
-                </div>
-                <div class="skill-box-item">
-                  <p>Figma</p>
-                  <div class="skill-item">
-                    <div style="width: 70%"></div>
-                  </div>
-                </div>
-                <div class="skill-box-item">
-                  <p>Figma</p>
-                  <div class="skill-item">
-                    <div style="width: 70%"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="skill">
-              <h3 class="design-skill-title">Development Skill</h3>
-              <div class="design-skill-box">
-                <div class="skill-box-item">
-                  <p>Figma</p>
-                  <div class="skill-item">
-                    <div style="width: 70%"></div>
-                  </div>
-                </div>
-                <div class="skill-box-item">
-                  <p>Figma</p>
-                  <div class="skill-item">
-                    <div style="width: 70%"></div>
-                  </div>
-                </div>
-                <div class="skill-box-item">
-                  <p>Figma</p>
-                  <div class="skill-item">
-                    <div style="width: 70%"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </menu>
-      </div>
-
-      <div id="contact">
-        <div class="contact-box-title">
-          <p class="contact-title">Contact</p>
-          <h3 class="contact-header">Contact With Me</h3>
-        </div>
-        <div class="contact-container">
-          <div class="contact-my-infor">
-            <div class="contact-box-img">
-              <img src="./assets/contact1.png" />
-            </div>
-            <div class="contact-box-name">
-              <h3>Thanh Lam</h3>
-              <p>Student</p>
-            </div>
-            <p class="contact-box-detail">
-              I am available for freelance work. Connect with me via and call in
-              to my account.
-            </p>
-            <div class="contact-box-address">
-              <p>Phone: +01234567890</p>
-              <p>Email: admin@example.com</p>
-            </div>
-          </div>
-          <div class="contact-your-infor">
-            <div class="contact-box-infor-name">
-              <div class="contact-your-item">
-                <p>YOUR NAME</p>
-                <input />
-              </div>
-              <div class="contact-your-item">
-                <p>PHONE NUMBER</p>
-                <input type="number" />
-              </div>
-            </div>
+        <div class="contact-your-infor">
+          <div class="contact-box-infor-name">
             <div class="contact-your-item">
-              <p>EMAIL</p>
+              <p>YOUR NAME</p>
               <input />
             </div>
             <div class="contact-your-item">
-              <p>SUBJECT</p>
-              <input />
+              <p>PHONE NUMBER</p>
+              <input type="number" />
             </div>
-            <div class="contact-your-item">
-              <p>YOUR MESSAGE</p>
-              <textarea></textarea>
-            </div>
-            <button class="btn-contact">SEND MESSAGE</button>
           </div>
+          <div class="contact-your-item">
+            <p>EMAIL</p>
+            <input />
+          </div>
+          <div class="contact-your-item">
+            <p>SUBJECT</p>
+            <input />
+          </div>
+          <div class="contact-your-item">
+            <p>YOUR MESSAGE</p>
+            <textarea></textarea>
+          </div>
+          <button class="btn-contact">SEND MESSAGE</button>
         </div>
       </div>
-    </main>
-  </body>
+    </div>
+  </main>
+</body>
+
 </html>
