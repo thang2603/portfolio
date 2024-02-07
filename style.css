@@ -38,10 +38,13 @@ main {
   text-transform: uppercase;
   font-weight: 600;
   color: #3c3e41;
+  transition-duration: 1s;
 }
 
 .right-menu p:hover {
   cursor: pointer;
+  color: #62BCF6;
+  transform: scale(1.1);
 }
 
 header {
@@ -192,6 +195,12 @@ header {
 .about-me-intro h2 {
   font-size: 30px;
   text-align: center;
+  transition-duration: 1s;
+}
+
+.about-me-intro h2:hover {
+  color: #62BCF6;
+  transform: scale(1.1);
 }
 
 .about-me-intro h4 {
@@ -247,6 +256,12 @@ header {
 .features-header {
   font-size: 30px;
   text-align: center;
+  transition-duration: 1s;
+}
+
+.features-header:hover {
+  color: #62BCF6;
+  transform: scale(1.1);
 }
 
 .features-container {
@@ -348,8 +363,6 @@ header {
 .education {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 30px;
 }
 
@@ -367,7 +380,7 @@ header {
 
 .education-box:hover {
   cursor: pointer;
-  background-color: #ff014f;
+  background-color: #62BCF6;
   color: #ffff;
   transform: scale(1.02);
 }
@@ -511,6 +524,12 @@ header {
 .contact-header {
   font-size: 30px;
   text-align: center;
+  transition-duration: 1s;
+}
+
+.contact-header:hover {
+  transform: scale(1.1);
+  color: #62BCF6;
 }
 
 .btn-contact {
@@ -652,6 +671,12 @@ header {
 .resume-title {
   text-align: center;
   font-size: 30px;
+  transition-duration: 1s;
+}
+
+.resume-title:hover {
+  color: #62BCF6;
+  transform: scale(1.1);
 }
 
 #modal {
