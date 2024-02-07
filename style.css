@@ -47,13 +47,19 @@ main {
   transform: scale(1.1);
 }
 
+.navbar-scrolled {
+  background-color: #d1d9e6;
+
+}
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   grid-template-columns: 1fr auto;
   padding: 20px 0px;
-  background-color: #d1d9e6;
+  background-color: transparent;
+
   width: 100%;
   position: fixed;
   left: 0;
