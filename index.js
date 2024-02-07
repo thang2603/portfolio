@@ -35,27 +35,17 @@ const clearModal = () => {
 
 var id = 1;
 const controlTetinalNext = (length) => {
-  id = id + 1;
-  if (id > length) {
-    id = length
-  }
-  for (let i = 1; i <= length; i++) {
-    document.getElementById(`show-slide-${i}`).style.display = 'none'
-  }
-  document.getElementById(`show-slide-${id}`).style.display = 'flex'
-
+  document.getElementById(`show-slide-1`).style.animation = `slide1 1.5s`
+  document.getElementById(`show-slide-1`).style.display = 'none'
+  document.getElementById(`show-slide-2`).style.display = 'flex'
+  document.getElementById(`show-slide-2`).style.animation = `slide2 1.5s`
 }
 
 const controlTetinalPre = (length) => {
-  id = id - 1;
-  if (id < 1) {
-    id = 1;
-  }
-  for (let i = 1; i <= length; i++) {
-    document.getElementById(`show-slide-${i}`).style.display = 'none'
-  }
-  document.getElementById(`show-slide-${id}`).style.display = 'flex'
-
+  document.getElementById(`show-slide-1`).style.animation = `slide1 1.5s reverse`
+  document.getElementById(`show-slide-1`).style.display = 'flex'
+  document.getElementById(`show-slide-2`).style.display = 'none'
+  document.getElementById(`show-slide-2`).style.animation = `slide2 1.5s reverse`
 }
 var idFeature = 0
 const controlFeaturesPre = () => {
