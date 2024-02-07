@@ -57,3 +57,37 @@ const controlTetinalPre = (length) => {
   document.getElementById(`show-slide-${id}`).style.display = 'flex'
 
 }
+var idFeature = 0
+const controlFeaturesPre = () => {
+  idFeature = idFeature - 1;
+  if (idFeature < 0) {
+    idFeature = 0
+  }
+  let tempSlides = document.getElementsByClassName('features-box')
+
+  for (let i = 0; i < tempSlides.length; i++) {
+    if (i < idFeature || i >= idFeature + 3) {
+      tempSlides[i].style.display = 'none'
+    }
+    else {
+      tempSlides[i].style.display = 'flex'
+    }
+  }
+}
+
+const controlFeaturesNext = () => {
+  idFeature = idFeature + 1;
+  let tempSlides = document.getElementsByClassName('features-box')
+  if (idFeature >= tempSlides.length - 3) {
+    idFeature = tempSlides.length - 3
+  }
+
+  for (let i = 0; i < tempSlides.length; i++) {
+    if (i < idFeature || i >= idFeature + 3) {
+      tempSlides[i].style.display = 'none'
+    }
+    else {
+      tempSlides[i].style.display = 'flex'
+    }
+  }
+}
