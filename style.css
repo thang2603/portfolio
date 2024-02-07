@@ -253,7 +253,7 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #0b68c5;
+  position: relative;
   gap: 12px;
   overflow: hidden;
 }
@@ -270,21 +270,66 @@ header {
   width: 300px;
 }
 
-.features-box:hover {
-  cursor: pointer;
+
+
+.features-box-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 4px;
+  z-index: 10;
+  width: 100%;
+  background-color: #c2c2c2;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 16px 0;
+  opacity: 0.9;
+}
+
+.features-box-content h3 {
+  color: #000000;
+  font-weight: 700;
+}
+
+.features-box-content button {
+  background-color: #0b68c5;
+  padding: 4px 12px;
+  border-radius: 12px;
+}
+
+.features-box-content button a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.features-box-item {
+  position: relative;
 }
 
 .features-control {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 12px;
+  width: 100%;
+  position: absolute;
 }
 
-.features-control button {
+.features-control i {
   cursor: pointer;
+  font-size: 24px;
+  transition-duration: 1s;
 }
 
+.features-control i:hover {
+  transform: scale(1.1);
+  color: #0b68c5;
+}
 
 #resume {
   padding: 90px 0px;
