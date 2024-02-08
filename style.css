@@ -714,6 +714,7 @@ header {
   border-bottom: 1px solid #3c3e41;
 }
 
+
 .tetinal-container {
   background-color: #C8E2F3;
   border-radius: 16px;
@@ -730,6 +731,23 @@ header {
   border-radius: 12px;
 }
 
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider1 {
+  display: flex;
+  /* transition: slide3 2s ease; */
+  /* Adjust the duration and easing as needed */
+}
+
+.slide {
+  flex: 0 0 100%;
+  /* Adjust the width of slides */
+  /* You can add background images or content to your slides here */
+}
+
 .tetinal-control {
   display: flex;
   gap: 20px;
@@ -742,10 +760,16 @@ header {
 
 #show-slide-1 {
   display: flex;
+  animation: slide3 5s infinite;
+  animation-delay: 0.5s;
+
 }
 
 #show-slide-2 {
-  display: none;
+  display: flex;
+  animation: slide4 5s infinite;
+  animation-delay: 2s;
+
 }
 
 .tetinal-box-img {
@@ -1005,6 +1029,33 @@ header {
 
     transform: translateX(0);
     opacity: 1;
+
+  }
+}
+
+@keyframes slide3 {
+
+  0% {
+    transform: translateX(800px);
+  }
+
+
+  100% {
+
+    transform: translateX(-2500px);
+
+  }
+}
+
+@keyframes slide4 {
+
+  0% {
+    transform: translateX(-200px);
+  }
+
+  100% {
+
+    transform: translateX(-2500px);
 
   }
 }
