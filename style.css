@@ -732,20 +732,28 @@ header {
 
 .tetinal-control {
   display: flex;
-  gap: 20px;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
 
 }
 
-.tetinal-control button {
-  cursor: pointer;
+.tetinal-control div {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #7a7a7a;
 }
 
 #show-slide-1 {
   display: flex;
+  animation: slide2 8s infinite;
 }
 
 #show-slide-2 {
-  display: none;
+  display: flex;
+  animation: slide2 8s infinite;
+  animation-delay: 1s;
 }
 
 .tetinal-box-img {
@@ -986,25 +994,37 @@ header {
 @keyframes slide1 {
 
   0% {
-    transform: translateX(0);
+    display: none;
+    transform: translateX(1000px);
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0.8;
   }
 
   100% {
+    display: flex;
     transform: translateX(-1000px);
+    opacity: 0;
   }
 }
 
 @keyframes slide2 {
 
   0% {
+    display: none;
+    transform: translateX(1000px);
+    opacity: 1;
+  }
 
-    transform: translateX(800px);
+  80% {
+    opacity: 0.8;
   }
 
   100% {
-
-    transform: translateX(0);
-    opacity: 1;
-
+    display: flex;
+    transform: translateX(-1000px);
+    opacity: 0;
   }
 }
