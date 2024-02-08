@@ -35,17 +35,19 @@ const clearModal = () => {
 
 var id = 1;
 const controlTetinalNext = (length) => {
-  document.getElementById(`show-slide-1`).style.animation = `slide1 1.5s`
+  document.getElementById(`show-slide-1`).style.animation = `slide1 1.5s infinite`
   document.getElementById(`show-slide-1`).style.display = 'none'
   document.getElementById(`show-slide-2`).style.display = 'flex'
-  document.getElementById(`show-slide-2`).style.animation = `slide2 1.5s`
+  document.getElementById(`show-slide-2`).style.animation = `slide2 1.5s infinite`
+
+
 }
 
 const controlTetinalPre = (length) => {
-  document.getElementById(`show-slide-1`).style.animation = `slide1 1.5s reverse`
+  document.getElementById(`show-slide-1`).style.animation = `slide1 1.5s reverse infinite`
   document.getElementById(`show-slide-1`).style.display = 'flex'
   document.getElementById(`show-slide-2`).style.display = 'none'
-  document.getElementById(`show-slide-2`).style.animation = `slide2 1.5s reverse`
+  document.getElementById(`show-slide-2`).style.animation = `slide2 1.5s reverse infinite`
 }
 var idFeature = 0
 const controlFeaturesPre = () => {
@@ -89,3 +91,7 @@ window.addEventListener('scroll', function () {
     navbar.classList.remove('navbar-scrolled');
   }
 });
+
+
+
+

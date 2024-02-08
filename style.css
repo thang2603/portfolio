@@ -714,6 +714,7 @@ header {
   border-bottom: 1px solid #3c3e41;
 }
 
+
 .tetinal-container {
   background-color: #C8E2F3;
   border-radius: 16px;
@@ -730,30 +731,45 @@ header {
   border-radius: 12px;
 }
 
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider1 {
+  display: flex;
+  /* transition: slide3 2s ease; */
+  /* Adjust the duration and easing as needed */
+}
+
+.slide {
+  flex: 0 0 100%;
+  /* Adjust the width of slides */
+  /* You can add background images or content to your slides here */
+}
+
 .tetinal-control {
   display: flex;
-  gap: 12px;
-  justify-content: center;
-  align-items: center;
+  gap: 20px;
 
 }
 
-.tetinal-control div {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #7a7a7a;
+.tetinal-control button {
+  cursor: pointer;
 }
 
 #show-slide-1 {
   display: flex;
-  animation: slide2 8s infinite;
+  animation: slide3 5s infinite;
+  animation-delay: 0.5s;
+
 }
 
 #show-slide-2 {
   display: flex;
-  animation: slide2 8s infinite;
-  animation-delay: 1s;
+  animation: slide4 5s infinite;
+  animation-delay: 2s;
+
 }
 
 .tetinal-box-img {
@@ -994,37 +1010,52 @@ header {
 @keyframes slide1 {
 
   0% {
-    display: none;
-    transform: translateX(1000px);
-    opacity: 1;
-  }
-
-  80% {
-    opacity: 0.8;
+    transform: translateX(0);
   }
 
   100% {
-    display: flex;
     transform: translateX(-1000px);
-    opacity: 0;
   }
 }
 
 @keyframes slide2 {
 
   0% {
-    display: none;
-    transform: translateX(1000px);
-    opacity: 1;
-  }
 
-  80% {
-    opacity: 0.8;
+    transform: translateX(800px);
   }
 
   100% {
-    display: flex;
-    transform: translateX(-1000px);
-    opacity: 0;
+
+    transform: translateX(0);
+    opacity: 1;
+
+  }
+}
+
+@keyframes slide3 {
+
+  0% {
+    transform: translateX(800px);
+  }
+
+
+  100% {
+
+    transform: translateX(-2500px);
+
+  }
+}
+
+@keyframes slide4 {
+
+  0% {
+    transform: translateX(-200px);
+  }
+
+  100% {
+
+    transform: translateX(-2500px);
+
   }
 }
